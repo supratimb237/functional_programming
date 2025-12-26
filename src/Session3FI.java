@@ -43,10 +43,14 @@ public class Session3FI {
             return x>10 && s.equalsIgnoreCase("test");
         };
 
-        
+        //BiFunction
+        BiFunction<Integer,String,String> biFunction = (x,y) -> x + " " + y;
 
-
-
+        //BiConsumer
+        BiConsumer<Integer,String> biConsumer = (x,y) -> {
+            System.out.println(x);
+            System.out.println(y);
+        };
 
         System.out.println(numbers.stream()
                 .filter(integerPredicate)
